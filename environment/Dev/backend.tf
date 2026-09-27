@@ -6,6 +6,13 @@ terraform {
       version = "~> 3.0"
     }
   }
+  backend "azurerm" {
+    resource_group_name = "newrg"
+    storage_account_name = "storage12345ag"
+    container_name = "container12"
+    key = "terraform.tfstate"
+    
+  }
 }
 
 provider "azurerm" {
